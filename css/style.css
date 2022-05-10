@@ -1,4 +1,47 @@
-h1 {
-  background-color: green;
+body {
+  font-family: 'Shrikhand', cursive;
+  width: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+header .logo {
+  font-family: font-family "Roboto", sans-serif;
+  width: 55%;
+}
+
+.localisation {
+  border: 20px solid color #99E2D0;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: color #99E2D0;
+  text-align: center;
+}
+
+.localisation .endroit {
+  border: px solid black;
 }
 /*# sourceMappingURL=style.css.map */
