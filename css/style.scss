@@ -1,10 +1,13 @@
-$font: font-family 'Roboto', sans-serif;
-$primaire: color #9356DC;
-$secondaire: color #FF79DA;
-$tertiaire: color #99E2D0;
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+
+$font: font-family 'Shrikhand', cursive;
+$primaire:  #9356DC;
+$secondaire:  #FF79DA;
+$tertiaire:  #99E2D0;
 
 body{
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Roboto', sans-serif;
     width: auto;
     margin-left: 0px;
     margin-right: 0px;
@@ -19,6 +22,8 @@ a{
     color:black;
 }
 
+/*header*/
+
 header{  
     display: flex;
     justify-content: center;
@@ -28,20 +33,52 @@ header{
     
     .logo{
         font-family: $font;
-        width: 55%;
+        width: 45%;
     }
 }
 
+/*Recherche des restaurants*/
+
 .localisation{
-    border: 20px solid $tertiaire;
-    margin-right: 20px;
-    margin-left: 20px;
-    background-color: $tertiaire darken($color: 99E2D0, $amount: 50);
+    background-color: lighten($color: $primaire, $amount: 37%);
     text-align: center;
 
     .endroit{
-        border: 2px solid $tertiaire;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:50px;
+        background-color: lighten($color: $primaire, $amount: 33%);
+        border-top: 2.7px lighten($color: $primaire, $amount: 24%) solid;
+        font-size: 17px;
+        margin-bottom: 40px;
+        font-weight: bold;
+        color: lighten($color: #000000, $amount: 24%);
+    }
 
+    .fa-location-dot{
+        margin-right: 15px;
+    }
+
+    h1{
+        font-weight: bold ;
+        font-size: 24px;
+        font-family: $font;
+        margin-bottom: 15px;
+        color: darken($color: #000000, $amount: 60%);
+    }
+
+    .decouverte{
+        color: lighten($color: #000000, $amount: 40%);
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    button{
+        width: auto;
+        height: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 

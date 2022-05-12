@@ -1,5 +1,52 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
 body {
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Roboto', sans-serif;
   width: auto;
   margin-left: 0px;
   margin-right: 0px;
@@ -14,6 +61,7 @@ a {
   color: black;
 }
 
+/*header*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,19 +77,50 @@ header {
 }
 
 header .logo {
-  font-family: font-family "Roboto", sans-serif;
-  width: 55%;
+  font-family: font-family "Shrikhand", cursive;
+  width: 45%;
 }
 
+/*Recherche des restaurants*/
 .localisation {
-  border: 20px solid color #99E2D0;
-  margin-right: 20px;
-  margin-left: 20px;
-  background-color: color #99E2D0;
+  background-color: #f7f2fc;
   text-align: center;
 }
 
 .localisation .endroit {
-  border: px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  background-color: #ece1f9;
+  border-top: 2.7px #d4bbf1 solid;
+  font-size: 17px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+.localisation .fa-location-dot {
+  margin-right: 15px;
+}
+
+.localisation h1 {
+  font-weight: bold;
+  font-size: 24px;
+  font-family: font-family "Shrikhand", cursive;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.localisation .decouverte {
+  color: #666666;
+  margin-bottom: 30px;
+  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */
