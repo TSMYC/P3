@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -45,6 +46,8 @@ td, th {
   padding: 0;
 }
 
+/*Les variable*/
+/*les mixins*/
 body {
   font-family: 'Roboto', sans-serif;
   width: auto;
@@ -85,6 +88,8 @@ header .logo {
 .localisation {
   background-color: #f7f2fc;
   text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .localisation .endroit {
@@ -115,12 +120,146 @@ header .logo {
   font-size: 24px;
   font-family: font-family "Shrikhand", cursive;
   margin-bottom: 15px;
-  color: black;
 }
 
 .localisation .decouverte {
   color: #666666;
   margin-bottom: 30px;
   font-size: 18px;
+}
+
+.localisation .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  font-weight: bold;
+  border-radius: 25px;
+  font-size: 14px;
+  margin-left: 80px;
+  margin-right: 80px;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin-bottom: 40px;
+}
+
+/*présention de l'entreprise*/
+.presentaion {
+  padding-left: 25px;
+  font-family: font-family "Shrikhand", cursive;
+}
+
+.presentaion h1 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.presentaion p {
+  background-color: #f7f2fc;
+  margin-top: 10px;
+  margin-right: 15px;
+  height: 70px;
+  font-weight: bold;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 52%;
+      -ms-flex: 52%;
+          flex: 52%;
+  overflow: visible;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 1px #f7f2fc;
+          box-shadow: 3px 3px 1px #f7f2fc;
+  margin-bottom: 25px;
+}
+
+.presentaion p .fa-mobile-screen-button {
+  color: #999999;
+  margin-right: 8%;
+  margin-left: 8%;
+  font-size: 22px;
+}
+
+.presentaion p em {
+  margin-left: -12px;
+  color: white;
+  width: 25px;
+  height: 25px;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: normal;
+  border-radius: 50px;
+  background-color: #9356DC;
+}
+
+.fa-bars {
+  color: #999999;
+  margin-right: 8%;
+  margin-left: 8%;
+  font-size: 22px;
+}
+
+.fa-store {
+  color: #999999;
+  margin-right: 8%;
+  margin-left: 8%;
+  font-size: 22px;
+  color: #9356DC;
+}
+
+/*listes des restaurants*/
+.liste {
+  background-color: #f7f2fc;
+  margin-top: 70px;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.liste h1 {
+  font-family: font-family "Shrikhand", cursive;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.liste .card1 {
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.liste .card1 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 170px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.liste .card1 .identite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,16 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
+/*Les variable*/
 
 $font: font-family 'Shrikhand', cursive;
 $primaire:  #9356DC;
 $secondaire:  #FF79DA;
 $tertiaire:  #99E2D0;
+$background: lighten($color: $primaire, $amount: 37%);
+
+
+/*les mixins*/
+@import "libs/mixins.scss";
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -40,8 +46,10 @@ header{
 /*Recherche des restaurants*/
 
 .localisation{
-    background-color: lighten($color: $primaire, $amount: 37%);
+    background-color: $background; 
     text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
 
     .endroit{
         display: flex;
@@ -61,11 +69,10 @@ header{
     }
 
     h1{
-        font-weight: bold ;
+        font-weight: bold;
         font-size: 24px;
         font-family: $font;
         margin-bottom: 15px;
-        color: darken($color: #000000, $amount: 60%);
     }
 
     .decouverte{
@@ -74,12 +81,110 @@ header{
         font-size: 18px;
     }
 
-    button{
-        width: auto;
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50px;
-        margin-left: 20px;
-        margin-right: 20px;
+        font-weight: bold;
+        border-radius: 25px;
+        font-size: 14px;
+        margin-left: 80px;
+        margin-right: 80px;
+        color: white; 
+        background: linear-gradient($secondaire, $primaire);
+        margin-bottom: 40px;
     }
 }
 
 
+/*présention de l'entreprise*/
+.presentaion{
+    padding-left: 25px;
+    font-family: $font;
+
+    h1{
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    p{
+        
+        background-color: $background;
+        margin-top: 10px;
+        margin-right: 15px;
+        
+        height: 70px;
+        font-weight: bold;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        flex: 52%;
+        overflow: visible;
+        border-radius: 20px;
+        box-shadow: 3px 3px 1px $background;
+        margin-bottom: 25px;
+    
+        .fa-mobile-screen-button{
+           @include icone;
+        }
+
+        em{
+            margin-left: -12px;
+            color: white;
+            width: 25px;
+            height: 25px;
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: normal;
+            border-radius: 50px;
+            background-color: $primaire;
+            
+            
+        }  
+    
+    }
+
+}
+
+.fa-bars{
+    @include icone;
+}
+
+.fa-store{
+    @include icone;
+    color: $primaire;
+}
+
+/*listes des restaurants*/
+
+.liste{
+    background-color: $background;
+    margin-top: 70px;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    h1{
+        font-family: $font;
+        font-weight:bold;
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+    
+    .card1{
+        border-radius: 20px;
+        background-color: white;
+        margin-bottom: 20px;
+        img{     
+            @include restaurant;
+        }
+
+    .identite{
+        display: flex;
+    } 
+    }
+}
