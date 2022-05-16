@@ -234,32 +234,105 @@ header .logo {
   padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 50px;
 }
 
 .liste h1 {
   font-family: font-family "Shrikhand", cursive;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 26px;
   margin-bottom: 30px;
 }
 
-.liste .card1 {
+.liste .card1, .liste .card2 {
   border-radius: 20px;
   background-color: white;
   margin-bottom: 20px;
+  height: 300px;
 }
 
-.liste .card1 img {
+.liste .card1 img, .liste .card2 img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 170px;
+  height: 210px;
   border-radius: 20px 20px 0px 0px;
 }
 
-.liste .card1 .identite {
+.liste .card1 .identite, .liste .card2 .identite {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 4%;
+  padding-top: 20px;
+  padding-right: 5%;
+}
+
+.liste .card1 .identite .fa-heart, .liste .card2 .identite .fa-heart {
+  font-size: 22px;
+  color: #666666;
+}
+
+.liste .card1 .identite h3, .liste .card2 .identite h3 {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: font-family "Shrikhand", cursive;
+  margin-bottom: 5px;
+}
+
+.liste .card1 .identite h4, .liste .card2 .identite h4 {
+  color: #666666;
+}
+
+.liste .card1 .identite .adresse, .liste .card2 .identite .adresse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+}
+
+footer {
+  background-color: #343333;
+  color: white;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+footer .logo2 {
+  font-family: font-family "Shrikhand", cursive;
+  width: 100px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+footer li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+footer li .fa-utensils {
+  margin-right: 7px;
+}
+
+footer li .fa-handshake-angle {
+  margin-right: 7px;
+}
+
+footer li a {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
