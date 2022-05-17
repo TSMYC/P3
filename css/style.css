@@ -86,7 +86,7 @@ header .logo {
 
 /*Recherche des restaurants*/
 .localisation {
-  background-color: #f7f2fc;
+  background-color: #f2eafb;
   text-align: center;
   padding-bottom: 20px;
   margin-bottom: 50px;
@@ -163,7 +163,7 @@ header .logo {
 }
 
 .presentaion p {
-  background-color: #f7f2fc;
+  background-color: #f2eafb;
   margin-top: 10px;
   margin-right: 15px;
   height: 70px;
@@ -180,8 +180,8 @@ header .logo {
           flex: 52%;
   overflow: visible;
   border-radius: 20px;
-  -webkit-box-shadow: 3px 3px 1px #f7f2fc;
-          box-shadow: 3px 3px 1px #f7f2fc;
+  -webkit-box-shadow: 3px 3px 1px #f2eafb;
+          box-shadow: 3px 3px 1px #f2eafb;
   margin-bottom: 25px;
 }
 
@@ -229,7 +229,7 @@ header .logo {
 
 /*listes des restaurants*/
 .liste {
-  background-color: #f7f2fc;
+  background-color: #f2eafb;
   margin-top: 70px;
   padding-top: 60px;
   padding-left: 20px;
@@ -259,6 +259,31 @@ header .logo {
   border-radius: 20px 20px 0px 0px;
 }
 
+.liste .card1 .restaurant, .liste .card2 .restaurant {
+  position: relative;
+}
+
+.liste .card1 .restaurant p, .liste .card2 .restaurant p {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  height: 25px;
+  background-color: #99E2D0;
+  color: #278870;
+  font-weight: bold;
+  font-size: 12px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .liste .card1 .identite, .liste .card2 .identite {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,11 +297,6 @@ header .logo {
   padding-left: 4%;
   padding-top: 20px;
   padding-right: 5%;
-}
-
-.liste .card1 .identite .fa-heart, .liste .card2 .identite .fa-heart {
-  font-size: 22px;
-  color: #666666;
 }
 
 .liste .card1 .identite h3, .liste .card2 .identite h3 {
@@ -312,7 +332,7 @@ footer {
   margin-bottom: 30px;
 }
 
-footer .logo2 {
+footer img {
   font-family: font-family "Shrikhand", cursive;
   width: 100px;
   color: white;
@@ -334,5 +354,92 @@ footer li .fa-handshake-angle {
 
 footer li a {
   color: white;
+}
+
+/*animations*/
+/*remplissage des coeurs*/
+.coeur {
+  position: relative;
+  margin-right: 10%;
+  margin-bottom: 35px;
+}
+
+.coeur .coeur1, .coeur .coeur2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.coeur .coeur1 {
+  opacity: 1;
+  color: #666666;
+}
+
+.coeur .coeur2 {
+  opacity: 0;
+}
+
+.coeur1:active {
+  opacity: 0;
+}
+
+.coeur2:active {
+  opacity: 1;
+  color: #9356DC;
+  cursor: pointer;
+}
+
+/*loading spinner*/
+.spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  border: 12px solid #99E2D0;
+  border-top-color: #e8f9f5;
+  border-bottom-color: #e8f9f5;
+  border-radius: 50%;
+  -webkit-animation: 1s ease infinite both spinner;
+          animation: 1s ease infinite both spinner;
+}
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
 }
 /*# sourceMappingURL=style.css.map */
