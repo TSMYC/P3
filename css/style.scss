@@ -2,11 +2,11 @@
 
 /*Les variable*/
 
-$font: font-family 'Shrikhand', cursive;
+$font: 'Shrikhand', cursive;
 $primaire:  #9356DC;
 $secondaire:  #FF79DA;
 $tertiaire:  #99E2D0;
-$background: lighten($color: $primaire, $amount: 35%);
+$background: lighten($color: $primaire, $amount: 37%);
 $text: lighten($color: black, $amount: 40%);
 $btn: linear-gradient($secondaire, $primaire);
 
@@ -27,6 +27,7 @@ ul{
 a{
     text-decoration: none;
     color:black;
+    cursor: pointer;
 }
 
 /*header*/
@@ -38,9 +39,10 @@ header{
     margin-top: 30px;
     margin-bottom: 15px;
     
-    .logo{
+    h1{
+        font-size: 32px;
+        font-weight: bold;
         font-family: $font;
-        width: 45%;
     }
 }
 
@@ -53,26 +55,33 @@ header{
     margin-bottom: 50px;
 
     .endroit{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height:50px;
-        background-color: lighten($color: $primaire, $amount: 33%);
-        border-top: 2.7px lighten($color: $primaire, $amount: 24%) solid;
-        font-size: 17px;
+        position: relative;
         margin-bottom: 40px;
+        border-top: 4px solid lighten($color: $primaire, $amount: 30%);
+        box-shadow: 0px 0px 0.2px $primaire;
+    }
+
+    input{ 
+        text-align: center;
+        height:50px;
+        width:100%;
+        background-color: lighten($color: $primaire, $amount: 34%);
+        font-size: 17px;
+        border: none;
         font-weight: bold;
         color: lighten($color: #000000, $amount: 24%);
     }
 
     .fa-location-dot{
-        margin-right: 15px;
+        position: absolute;
+        top: 16px;
+        left: 24%;
+        color: lighten($color: #000000, $amount: 24%);
     }
 
     h1{
         font-weight: bold;
         font-size: 24px;
-        font-family: $font;
         margin-bottom: 15px;
     }
 
@@ -81,28 +90,53 @@ header{
         margin-bottom: 30px;
         font-size: 18px;
     }
-
-    .btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        font-weight: bold;
-        border-radius: 25px;
-        font-size: 14px;
-        margin-left: 80px;
-        margin-right: 80px;
-        color: white; 
-        background: $btn;
-        margin-bottom: 40px;
-    }
 }
 
+.btn{
+    position: relative;
+    height: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: unset;
+}
+
+.btn1, .btn2{
+    height: 50px;
+    color: rgb(237, 231, 231); 
+    font-weight: bold;
+    border-radius: 25px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    background: $btn;
+    box-shadow: 0px 0px 5px rgba(147,86,220,1);
+    transition: 1s;
+    position: absolute;
+    top:0px;
+}
+
+.btn2{
+    background: linear-gradient(180deg, rgb(173, 144, 210) 0%, rgb(237, 164, 217) 100%);
+    box-shadow: 0px 0px 20px rgb(173, 117, 241);
+    opacity: 0;
+}
+
+.btn1:hover{
+    opacity: 0;
+}
+
+.btn2:hover{
+    opacity: 1;
+    cursor: pointer;
+}
 
 /*présention de l'entreprise*/
 .presentaion{
     padding-left: 25px;
-    font-family: $font;
 
     h1{
         font-weight: bold;
@@ -142,8 +176,7 @@ header{
             font-weight: normal;
             border-radius: 50px;
             background-color: $primaire;
-            
-            
+            font-style: normal;
         }  
     
     }
@@ -170,7 +203,6 @@ header{
     padding-bottom: 50px;
 
     h1{
-        font-family: $font;
         font-weight:bold;
         font-size: 26px;
         margin-bottom: 30px;
@@ -215,7 +247,6 @@ header{
             h3{
                 font-weight: bold;
                 font-size: 20px;
-                font-family: $font;
                 margin-bottom: 5px;
             }
 
@@ -232,10 +263,6 @@ header{
     }
 }
 
-.card2{
-    @extend .card1
-}
-
 footer{
     background-color: #343333;
     color: white;
@@ -243,17 +270,18 @@ footer{
     padding-left: 20px;
     padding-bottom: 25px;
     margin-bottom: 30px;
+   
     
-    img{
+    h3{
         font-family: $font;
-        width: 100px;
         color: white;
+        font-size: 20px;
         margin-bottom: 20px;
     }
 
     li{
         margin-bottom: 10px;
-        font-size: 15px;
+        font-size: 18px;
 
         .fa-utensils{
             margin-right: 7px;
@@ -282,7 +310,8 @@ footer{
         position: absolute;
         top: 0;
         left: 0;
-        font-size: 24px;
+        font-size: 28px;
+        font-weight: normal;
         transition: 1s;
     }
 
@@ -295,13 +324,15 @@ footer{
     }
 }
 
-.coeur1:active{
+.coeur1:hover{
     opacity: 0;
 }
 
-.coeur2:active{
+.coeur2:hover{
     opacity: 1;
-    color: $primaire;
+    background: linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     cursor: pointer;
 }
 
@@ -310,15 +341,30 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    animation: 1s 3s 1 both disparition;
 }
 
-.loading{
+@keyframes disparition {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+.loading1, .loading2, .loading3{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.loading::after{
+.loading2::after{
     content:"";
     height: 50px;
     width:50px;
@@ -326,12 +372,286 @@ footer{
     border-top-color: lighten($color: $tertiaire, $amount: 20%);
     border-bottom-color: lighten($color: $tertiaire, $amount: 20%);
     border-radius: 50%;
+    animation: 1s ease infinite both spinner;    
+}   
+
+.loading3::after{
+    content:"";
+    height: 50px;
+    width:50px;
+    border: 12px solid $primaire;
+    border-radius: 50%;
+    border-top-color: lighten($color: $primaire, $amount: 20%);
+    border-bottom-color: lighten($color: $primaire, $amount: 20%);
     animation: 1s ease infinite both spinner;
 }
+
+.loading1::after{
+    content:"";
+    height: 50px;
+    width:50px;
+    border: 12px solid $secondaire;
+    border-radius: 50%;
+    border-top-color: lighten($color: $secondaire, $amount: 20%);
+    border-bottom-color: lighten($color: $secondaire, $amount: 20%);
+    animation: 1s ease infinite both spinner;
+}
+
 
 @keyframes spinner {
     to{
         transform: rotate(1turn);
     }
 }
+
+/*check*/
+
+.noms{
+    display: flex;
+    padding-left: 3%;
+    border-radius: 15px;
+    background-color: white;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 20px #daeded;
+
+    .fa-check-circle{     
+       display: none;
+    }
+
+    .plat{
+
+        padding-bottom: 15px;
+        width:100%;
+        display: flex;
+
+        P{   
+            align-self: flex-end;
+            font-weight: bold;
+            color:rgb(54, 51, 51);
+            margin-left: 3%;
+            margin-right: 7%;
+        }
+
+        h3{
+            font-size: 18px;
+            font-style: normal;
+            font-weight: bold;
+            width: 85%;
+            padding-top: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            em{
+                font-size: 16px;
+                color: $text;
+                font-weight: normal;
+                font-style: normal;
+            }
+        }
+    }
+}
+
+.noms:active{
+    cursor:pointer;
+
+    .fa-check-circle{  
+        display: block;
+        border-radius: 0px 15px 15px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        color: white;
+        font-size: 18px;
+        margin-right: 0%;
+        font-weight: bold;
+        background-color: $tertiaire;
+        animation: check 1s 1s 1 both;
+       
+    }
+
+    em{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    h3{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@keyframes check {
+    from {
+        width: 0%;
+    }
+    
+    to{
+        width: 18%;  
+    }
+}
+
+@keyframes icône {
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+/*présentation des menus*/
+.entrees{
+    animation: menus 2s 1s 1 both; 
+}
+
+.resistance{
+    animation: menus 2s 3s 1 both;
+}
+
+.dessert{
+    animation: menus 2s 5s 1 both;
+}
+
+@keyframes menus {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+/*Page2*/
+.header2{
+    margin-bottom: 7px;
+    display: flex;
+
+    h1{
+        font-size: 28px;
+        font-weight: bold;
+        font-family: $font;
+        text-align: center;
+        margin-right: 18%;
+        flex: 70%;
+    }
+
+    a{
+        font-weight: bold;
+        font-size: 22px;
+        margin-left: 8%;
+    }
+}
+/*le menu du restaurant*/
+
+.restaurant1{
+    margin-top: Opx;
+
+    .image{  
+        width:100%;
+        height: 250px;
+        background-image: url(images/la-palette.jpg);
+    }
+
+    .image1{  
+        width:100%;
+        height: 250px;
+        background-image: url(images/la-note-enchantée.jpg);
+    }
+
+    .image2{  
+        width:100%;
+        height: 250px;
+        background-image: url(images/A-la-française.jpg);
+    }
+
+    .image3{  
+        width:100%;
+        height: 250px;
+        background-image: url(images/le-délice-des-sens.jpg);
+    }
+
+    .menu{
+        background-color: $background;
+        border-radius: 50px 50px 0px 0px;
+        margin-top: -50px;
+        padding-left: 4%;
+        padding-right: 3%;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        
+        .titre{
+            display: flex;
+            margin-right: 5%;
+
+            h1{
+                font-size: 26px;
+                font-family: $font;
+                flex: 90%;
+            }
+        }
+
+        .entrees{
+            margin-top: 40px;
+
+            h2{
+                margin-bottom: 20px;
+                color: $text;
+                font-size: 18px;
+
+                em{
+                    font-style: normal;
+                    padding-bottom: 3px;
+                    border-bottom: $tertiaire 3px solid;
+                }
+            }
+
+            
+        }
+    
+    }
+}
+
+.resistance{
+    @extend .entrees;
+}
+
+.dessert{
+    @extend .entrees;
+}
+
+.bouton{
+    margin-top: 50px;
+    
+    .btn1, .btn2{
+        font-size: 15px;
+        width: 180px;
+    }
+}
+
+/*media queries*/
+
+@media screen and (min-width: 750px){
+    .localisation, .presentaion{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .liste{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+   
+}
+
+
+
+
+
 

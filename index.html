@@ -17,21 +17,27 @@
 
 <body>
     <div class="spinner">
-        <div class="loading"></div>
-        <div class="loading"></div>
-        <div class="loading"></div>
+        <div class="loading1"></div>
+        <div class="loading2"></div>
+        <div class="loading3"></div>
     </div>
 
     <header>
-        <img src="images/logo.png" alt="logo" class="logo"/>
+        <h1>ohmyfood</h1>
     </header>
-
+    
     <!--Recherche des restaurants-->
     <section class="localisation">
-        <p class="endroit"><i class="fa-solid fa-location-dot"></i> Paris, Belleville</p>
+        <div class="endroit">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" value="Paris, Belleville">
+        </div>
         <h1>Réservez le menu qui</br> vous convient</h1>
         <p class="decouverte">Découvrez des restaurants d'exception, </br> séléctionnés par nos soins.</p>
-        <p class="btn">Explorer nos restaurants</p>
+        <div class="btn">
+            <p class="btn1">Explorer nos restaurants</p>
+            <p class="btn2">Explorer nos restaurants</p>
+        </div>
     </section>
 
     <!--présention de l'entreprise-->
@@ -46,6 +52,7 @@
     <section class="liste">
         <h1>Restaurants</h1>
 
+        <div class="media">
         <!--premier restaurant-->
         <a href="index1.html">
             <div class="card1">
@@ -65,12 +72,13 @@
                 </div>
             </div>
         </a>
+        
 
         <!--le deuxième restaurant-->
         <a href="index2.html">
             <div  class="card1">
                 <div class="restaurant">
-                    <img src="images/la-palette.jpg" alt="restaurant la-palette-du-goût"/>
+                    <img src="images/la-note-enchantée.jpg" alt="restaurant la-note-enchanté"/>
                     <p>Nouveau</p>
                 </div>
                 <div class="identite">
@@ -88,8 +96,8 @@
 
         <!--le troisième restaurant-->
         <a href="index3.html">
-            <div class="card2">
-                <img src="images/A-la-française.jpg" alt="restaurant À la française"/>
+            <div class="card1">
+                <img src="images/A-la-française.jpg" alt="restaurant À-la-française"/>
                 <div class="identite">
                     <div class="adresse">
                         <h3>À  la française</h3>
@@ -102,11 +110,12 @@
                 </div>
             </div>
         </a>
+        
 
         <!--Le quatrième restaurant-->
         <a href="index4.html">
-            <div class="card2">
-                <img src="images/le-délice-des-sens.jpg" alt="restaurant Le délice des sens"/>
+            <div class="card1">
+                <img src="images/le-délice-des-sens.jpg" alt="restaurant Le-délice-des-sens"/>
                 <div class="identite">
                     <div class="adresse">
                         <h3>Le délice des sens</h3>
@@ -119,11 +128,13 @@
                 </div>
             </div>
         </a>
+        </div>
+        
     </section>
 
     <footer>
         <nav>
-            <img src="images/logo.png" alt="le logo ohmyfood"/>
+            <h3>ohmyfood</h3>
             <ul>
                 <li><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li>
                 <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
