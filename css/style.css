@@ -140,7 +140,7 @@ header h1 {
   color: #4E4E4E;
 }
 
-.localisation h2 {
+.localisation h1 {
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 15px;
@@ -215,7 +215,7 @@ header h1 {
   padding-left: 25px;
 }
 
-.presentaion h2 {
+.presentaion h1 {
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 20px;
@@ -297,7 +297,7 @@ header h1 {
   padding-bottom: 50px;
 }
 
-.liste h2 {
+.liste h1 {
   font-weight: bold;
   font-size: 26px;
   margin-bottom: 30px;
