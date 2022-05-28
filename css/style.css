@@ -88,7 +88,7 @@ header h1 {
 
 /*Recherche des restaurants*/
 .localisation {
-  background-color: #f7f2fc;
+  background-color: #F6F6F6;
   text-align: center;
   padding-bottom: 20px;
   margin-bottom: 50px;
@@ -97,7 +97,7 @@ header h1 {
 .localisation .endroit {
   position: relative;
   margin-bottom: 40px;
-  border-top: 4px solid #e4d5f6;
+  border-top: 3px solid #D4D4D4;
   -webkit-box-shadow: 0px 0px 0.2px #9356DC;
           box-shadow: 0px 0px 0.2px #9356DC;
 }
@@ -106,18 +106,38 @@ header h1 {
   text-align: center;
   height: 50px;
   width: 100%;
-  background-color: #efe6fa;
+  background-color: #EAEAEA;
   font-size: 17px;
   border: none;
   font-weight: bold;
-  color: #3d3d3d;
+  color: #4E4E4E;
+}
+
+.localisation ::-webkit-input-placeholder {
+  opacity: 1;
+  color: #4E4E4E;
+}
+
+.localisation :-ms-input-placeholder {
+  opacity: 1;
+  color: #4E4E4E;
+}
+
+.localisation ::-ms-input-placeholder {
+  opacity: 1;
+  color: #4E4E4E;
+}
+
+.localisation ::placeholder {
+  opacity: 1;
+  color: #4E4E4E;
 }
 
 .localisation .fa-location-dot {
   position: absolute;
   top: 16px;
   left: 24%;
-  color: #3d3d3d;
+  color: #4E4E4E;
 }
 
 .localisation h1 {
@@ -145,7 +165,6 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: unset;
 }
 
 .btn1, .btn2 {
@@ -203,7 +222,7 @@ header h1 {
 }
 
 .presentaion p {
-  background-color: #f7f2fc;
+  background-color: #F6F6F6;
   margin-top: 10px;
   margin-right: 15px;
   height: 70px;
@@ -220,8 +239,8 @@ header h1 {
           flex: 52%;
   overflow: visible;
   border-radius: 20px;
-  -webkit-box-shadow: 3px 3px 1px #f7f2fc;
-          box-shadow: 3px 3px 1px #f7f2fc;
+  -webkit-box-shadow: 3px 3px 1px #F6F6F6;
+          box-shadow: 3px 3px 1px #F6F6F6;
   margin-bottom: 25px;
 }
 
@@ -270,7 +289,7 @@ header h1 {
 
 /*listes des restaurants*/
 .liste {
-  background-color: #f7f2fc;
+  background-color: #F6F6F6;
   margin-top: 70px;
   padding-top: 60px;
   padding-left: 20px;
@@ -289,6 +308,8 @@ header h1 {
   background-color: white;
   margin-bottom: 20px;
   height: 300px;
+  -webkit-box-shadow: 0px 0px 20px #daeded;
+          box-shadow: 0px 0px 20px #daeded;
 }
 
 .liste .card1 img {
@@ -337,6 +358,7 @@ header h1 {
   padding-left: 4%;
   padding-top: 20px;
   padding-right: 5%;
+  white-space: nowrap;
 }
 
 .liste .card1 .identite h3 {
@@ -363,7 +385,7 @@ header h1 {
 }
 
 footer {
-  background-color: #343333;
+  background-color: #353535;
   color: white;
   padding-top: 30px;
   padding-left: 20px;
@@ -415,11 +437,15 @@ footer li a {
 
 .coeur .coeur1 {
   opacity: 1;
-  color: #666666;
+  color: "Shrikhand", cursive;
 }
 
 .coeur .coeur2 {
   opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .coeur1:hover {
@@ -428,10 +454,6 @@ footer li a {
 
 .coeur2:hover {
   opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
 
@@ -449,6 +471,8 @@ footer li a {
   height: 100%;
   position: fixed;
   width: 100%;
+  top: 0px;
+  z-index: 5;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-animation: 1s 3s 1 both disparition;
           animation: 1s 3s 1 both disparition;
@@ -457,18 +481,22 @@ footer li a {
 @-webkit-keyframes disparition {
   from {
     opacity: 1;
+    z-index: 5;
   }
   to {
     opacity: 0;
+    z-index: -1;
   }
 }
 
 @keyframes disparition {
   from {
     opacity: 1;
+    z-index: 5;
   }
   to {
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -545,6 +573,7 @@ footer li a {
   margin-bottom: 15px;
   -webkit-box-shadow: 0px 0px 20px #daeded;
           box-shadow: 0px 0px 20px #daeded;
+  overflow: hidden;
 }
 
 .noms .fa-check-circle {
@@ -557,6 +586,7 @@ footer li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 
 .noms .plat P {
@@ -564,19 +594,21 @@ footer li a {
       align-self: flex-end;
   font-weight: bold;
   color: #363333;
-  margin-left: 3%;
   margin-right: 7%;
+  margin-left: 3%;
 }
 
 .noms .plat h3 {
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
-  width: 85%;
   padding-top: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 .noms .plat h3 em {
@@ -590,9 +622,15 @@ footer li a {
   cursor: pointer;
 }
 
+.noms:active .fa-check-circle::before {
+  -webkit-animation: icône 1s 1s 1 both;
+          animation: icône 1s 1s 1 both;
+}
+
 .noms:active .fa-check-circle {
   display: block;
   border-radius: 0px 15px 15px 0px;
+  margin-top: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,7 +640,6 @@ footer li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 0px;
   color: white;
   font-size: 18px;
   margin-right: 0%;
@@ -644,15 +681,15 @@ footer li a {
 
 @-webkit-keyframes icône {
   to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
+    -webkit-transform: rotate(3turn);
+            transform: rotate(3turn);
   }
 }
 
 @keyframes icône {
   to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
+    -webkit-transform: rotate(3turn);
+            transform: rotate(3turn);
   }
 }
 
@@ -722,30 +759,34 @@ footer li a {
 
 .restaurant1 .image {
   width: 100%;
-  height: 250px;
-  background-image: url(images/la-palette.jpg);
+  height: 280px;
+  background-image: url(../images/la-palette.jpg);
+  background-size: cover;
 }
 
 .restaurant1 .image1 {
   width: 100%;
-  height: 250px;
-  background-image: url(images/la-note-enchantée.jpg);
+  height: 280px;
+  background-image: url(../images/la-note-enchantée.jpg);
+  background-size: cover;
 }
 
 .restaurant1 .image2 {
   width: 100%;
-  height: 250px;
-  background-image: url(images/A-la-française.jpg);
+  height: 280px;
+  background-image: url(../images/A-la-française.jpg);
+  background-size: cover;
 }
 
 .restaurant1 .image3 {
   width: 100%;
-  height: 250px;
-  background-image: url(images/le-délice-des-sens.jpg);
+  height: 280px;
+  background-image: url(../images/le-délice-des-sens.jpg);
+  background-size: cover;
 }
 
 .restaurant1 .menu {
-  background-color: #f7f2fc;
+  background-color: #F6F6F6;
   border-radius: 50px 50px 0px 0px;
   margin-top: -50px;
   padding-left: 4%;
@@ -795,16 +836,134 @@ footer li a {
 }
 
 /*media queries*/
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 750px) and (max-width: 990px) {
   .localisation, .presentaion {
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
   }
   .liste {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .liste h1 {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .liste a {
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .header2 {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .restaurant1 {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .localisation, .presentaion {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .liste {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .liste h1 {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .liste a {
+    -webkit-box-flex: 22%;
+        -ms-flex: 22%;
+            flex: 22%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .liste .identite {
+    white-space: nowrap;
+  }
+  .header2 {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .header2 a {
+    margin-left: 20%;
+  }
+  .restaurant1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .restaurant1 .image {
+    width: 50%;
+  }
+  .restaurant1 .image1 {
+    width: 50%;
+  }
+  .restaurant1 .image2 {
+    width: 50%;
+  }
+  .restaurant1 .image3 {
+    width: 50%;
+  }
+  .restaurant1 .menu {
+    margin-top: 0px;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .restaurant1 .menu .titre {
+    width: 100%;
+  }
+  .restaurant1 .menu .entrees, .restaurant1 .menu .resistance, .restaurant1 .menu .dessert {
+    width: 40%;
+  }
+  .restaurant1 .menu .dessert {
+    width: 50%;
+  }
+  .restaurant1 .bouton {
+    width: 100%;
+  }
+  footer {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
