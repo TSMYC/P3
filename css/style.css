@@ -848,7 +848,7 @@ footer li a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .liste h1 {
+  .liste h2 {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
@@ -888,7 +888,7 @@ footer li a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .liste h1 {
+  .liste h2 {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
