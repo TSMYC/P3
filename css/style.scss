@@ -780,7 +780,7 @@ footer{
         cursor:pointer;
     
         .fa-check-circle::before{
-            animation: icône 1s 1s 1 both;
+            animation: icône 1s 0s 1 both;
         }
     
         .fa-check-circle{  
@@ -795,7 +795,7 @@ footer{
             margin-right: 0%;
             font-weight: bold;
             background-color: $tertiaire;
-            animation: check 1s 1s 1 both; 
+            animation: check 1s 0s 1 both; 
         }
     
         em{

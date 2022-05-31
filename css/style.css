@@ -965,8 +965,8 @@ footer li a {
     cursor: pointer;
   }
   .noms:hover .fa-check-circle::before {
-    -webkit-animation: icône 1s 1s 1 both;
-            animation: icône 1s 1s 1 both;
+    -webkit-animation: icône 1s 0s 1 both;
+            animation: icône 1s 0s 1 both;
   }
   .noms:hover .fa-check-circle {
     display: block;
@@ -986,8 +986,8 @@ footer li a {
     margin-right: 0%;
     font-weight: bold;
     background-color: #99E2D0;
-    -webkit-animation: check 1s 1s 1 both;
-            animation: check 1s 1s 1 both;
+    -webkit-animation: check 1s 0s 1 both;
+            animation: check 1s 0s 1 both;
   }
   .noms:hover em {
     overflow: hidden;
