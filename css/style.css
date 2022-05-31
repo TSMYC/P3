@@ -431,8 +431,8 @@ footer li a {
   left: 0;
   font-size: 28px;
   font-weight: normal;
-  -webkit-transition: 3s;
-  transition: 3s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .coeur .coeur1 {
@@ -960,6 +960,44 @@ footer li a {
   }
   .restaurant1 .bouton {
     width: 100%;
+  }
+  .noms:hover {
+    cursor: pointer;
+  }
+  .noms:hover .fa-check-circle::before {
+    -webkit-animation: icône 1s 1s 1 both;
+            animation: icône 1s 1s 1 both;
+  }
+  .noms:hover .fa-check-circle {
+    display: block;
+    border-radius: 0px 15px 15px 0px;
+    margin-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    font-size: 18px;
+    margin-right: 0%;
+    font-weight: bold;
+    background-color: #99E2D0;
+    -webkit-animation: check 1s 1s 1 both;
+            animation: check 1s 1s 1 both;
+  }
+  .noms:hover em {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .noms:hover h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   footer {
     text-align: center;

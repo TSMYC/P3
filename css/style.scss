@@ -318,7 +318,7 @@ footer{
         left: 0;
         font-size: 28px;
         font-weight: normal;
-        transition: 3s;
+        transition: 1s;
     }
 
     .coeur1{
@@ -773,6 +773,41 @@ footer{
 
         .bouton{
             width: 100%;
+        }
+    }
+
+    .noms:hover{
+        cursor:pointer;
+    
+        .fa-check-circle::before{
+            animation: icône 1s 1s 1 both;
+        }
+    
+        .fa-check-circle{  
+            display: block;
+            border-radius: 0px 15px 15px 0px;
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            margin-right: 0%;
+            font-weight: bold;
+            background-color: $tertiaire;
+            animation: check 1s 1s 1 both; 
+        }
+    
+        em{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    
+        h3{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
 
